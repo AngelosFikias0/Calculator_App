@@ -80,3 +80,7 @@ th:hover{
     color: #ddd;
     cursor: pointer;
 }
+
+h4:empty{
+    visibility: hidden;
+}
