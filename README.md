@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a simple web-based calculator application showcasing basic arithmetic operations. It was developed as a learning exercise in HTML, CSS, and JavaScript.
+This is a simple web-based calculator application showcasing basic arithmetic operations. It was developed as a learning exercise in HTML, CSS, and JavaScript. It is a different kind of implementation as opposed to the other version of a calculator, however i kept both as to showcase both implementations and their fundamental differences separately. 
 
 ## Features
 
