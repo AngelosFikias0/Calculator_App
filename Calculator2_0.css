@@ -84,3 +84,8 @@ th:hover{
 h4:empty{
     visibility: hidden;
 }
+
+#er:hover{
+    background-color: #a0aea9;
+    color: #000000;
+}

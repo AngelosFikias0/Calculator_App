@@ -14,6 +14,8 @@ function buttonClick(event) {
     if (buttonValue === 'C') {
         expression = '';
         result = '';
+    } else if (buttonValue === '←') {
+        expression = expression.slice(0,-1);
     } else if (buttonValue === '=') {
         try {
             if(expression === ''){
@@ -23,6 +25,7 @@ function buttonClick(event) {
             results.textContent = result;}
         } catch (error) {
             results.textContent = 'Error';
+            results.style.backgroundColor = 'Red';
         }
     } else {
         expression += buttonValue;
