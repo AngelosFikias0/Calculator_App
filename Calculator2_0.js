@@ -41,9 +41,20 @@ function buttonClick(event) {
         }
     } else {
         expression += buttonValue;
-    }
+    }    
     calc.textContent = expression;
 }
+results.addEventListener('mouseover', function (evt) {
+    results.style.backgroundColor = 'white';
+   }, false);   
+
+results.addEventListener('mouseout', function (evt) {
+    if(results.textContent != 'Error'){
+        results.style.backgroundColor = 'rgb(153, 137, 137)';
+    }else{
+        results.style.backgroundColor = 'red';
+    }
+   }, false); 
 
 buttons.forEach(button => {
     button.addEventListener('click', buttonClick);
