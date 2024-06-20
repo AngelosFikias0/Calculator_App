@@ -56,6 +56,24 @@ results.addEventListener('mouseout', function (evt) {
     }
    }, false); 
 
+calc.addEventListener('mouseover', function (evt) {
+    calc.style.backgroundColor = 'white';
+   }, false);  
+
+calc.addEventListener('mouseout', function (evt) {
+    calc.style.backgroundColor = 'rgb(153, 137, 137)';
+   }, false); 
+
+head.addEventListener('mouseover', function (evt) {
+    head.style.backgroundColor = 'pink';
+    this.innerHTML = "Thank you :)"
+   }, false); 
+
+head.addEventListener('mouseout', function (evt) {
+    head.style.backgroundColor = 'darksalmon';
+    this.innerHTML = "This is a simple calculator web app showcasing my skills in HTML, CSS AND JAVASCRIPT."
+   }, false); 
+
 buttons.forEach(button => {
     button.addEventListener('click', buttonClick);
 });
