@@ -15,6 +15,11 @@ h3{
     width: fit-content;
 }
 
+hr{
+    width: auto;
+    border: solid 1px black;
+}
+
 h4 {
     display: flex; 
     justify-content: center;  
