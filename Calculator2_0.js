@@ -4,7 +4,7 @@ const buttons = document.querySelectorAll('th');
 
 let expression = '';
 let result = '';
-let hasError = false; // Flag to track if an error has occurred
+let hasError = false; 
 
 const calc = document.getElementById('calc');
 const results = document.getElementById('results');
@@ -18,7 +18,7 @@ function buttonClick(event) {
         if (hasError) {
             results.style.backgroundColor = 'rgb(153, 137, 137)';
             results.textContent = 'Please give correct input';
-            hasError = false; // Reset the error flag
+            hasError = false; 
         } else {
             results.textContent = 'Please input something';
         }
