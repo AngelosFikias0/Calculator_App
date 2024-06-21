@@ -2,7 +2,7 @@
 
 const buttons = document.querySelectorAll('th');
 
-let expression = '';
+let expression = ' ';
 let result = '';
 let hasError = false; 
 
@@ -11,24 +11,29 @@ const results = document.getElementById('results');
 
 function buttonClick(event) {
     const buttonValue = event.target.textContent;
-    
     if (buttonValue === 'C') {
-        expression = '';
-        result = '';
         if (hasError) {
             results.style.backgroundColor = 'rgb(153, 137, 137)';
             results.textContent = 'Please give correct input';
             hasError = false; 
-        } else {
+        }else if(expression === ' '){
             results.textContent = 'Please input something';
         }
+        expression = ' ';
+        result = '';
     } else if (buttonValue === '←') {
         expression = expression.slice(0, -1);
     } else if (buttonValue === '=') {
         try {
-            if (expression === '') {
+            if (expression === ' ') {
                 results.textContent = 'Please input something';
-            } else {
+            } 
+            else if(expression.includes('//')) {
+                results.textContent = 'Error';
+                results.style.backgroundColor = 'Red';
+                hasError = true;
+            }
+            else {
                 result = eval(expression); 
                 results.textContent = result;
                 results.style.backgroundColor = 'rgb(153, 137, 137)';
@@ -77,3 +82,22 @@ head.addEventListener('mouseout', function (evt) {
 buttons.forEach(button => {
     button.addEventListener('click', buttonClick);
 });
+
+document.addEventListener('mousemove', function (e) {
+    createTrail(e.pageX, e.pageY);
+});
+
+function createTrail(x, y) {
+    const trail = document.createElement('div');
+    trail.classList.add('trail');
+    trail.style.left = `${x}px`;
+    trail.style.top = `${y}px`;
+    document.body.appendChild(trail);
+
+    setTimeout(() => {
+        trail.style.opacity = '0';
+        setTimeout(() => {
+            trail.remove();
+        },0); 
+    }, 90);
+}

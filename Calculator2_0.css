@@ -30,7 +30,8 @@ h4 {
     width: fit-content;
     border: 2px dotted black; 
     margin: 30px auto; 
-    background-color: rgb(163, 157, 147);
+    margin-bottom: 0px;
+    background-color: rgb(153, 137, 137);
 }
 
 p{
@@ -93,4 +94,13 @@ h4:empty{
 #er:hover{
     background-color: #a0aea9;
     color: #000000;
+}
+
+.trail {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(210, 41, 63, 0.2);
+    border-radius: 50%;
+    pointer-events: none; 
 }
