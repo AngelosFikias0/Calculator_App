@@ -6,8 +6,8 @@ This is a simple web-based calculator application showcasing basic arithmetic op
 
 ## Features
 
-- Addition (`+`), subtraction (`-`), multiplication (`*`), and division (`/`) operations.
-- Clear button (`C`) to reset the calculator.
+- Addition (`+`), subtraction (`-`), multiplication (`*`), raise to power (`**`) and division (`/`) operations.
+- Clear button (`C`) to reset the calculator and delete last input of the expression.
 - Error handling for invalid expressions.
 - Responsive design for various screen sizes.
 
